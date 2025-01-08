@@ -1,0 +1,299 @@
+@font-face {
+    font-family: 'LEPKA';
+    src: url('fonts/LEPKA.otf') format('opentype');
+}
+@font-face {
+    font-family: 'LuckiestGuy';
+    src: url('fonts/LuckiestGuy.ttf') format('opentype');
+}
+@font-face {
+    font-family: 'n1';
+    src: url('fonts/KarstenThin.otf') format('opentype');
+}
+
+body {
+    margin: 0;
+    font-family: 'LEPKA', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0; /* Добавляем отступ сверху и снизу */
+    background: none; /* Делаем фон прозрачным */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+    font-size: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(45, 51, 62);
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: none; /* Убираем фон у кнопок */
+    transition: transform 0.3s; /* Добавляем плавный переход для трансформации */
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    transform: scale(1.2); 
+}
+
+.hero {
+    background-color: rgb(241, 228, 211);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0; /* Убираем отступ сверху */
+    height: 100vh; /* Занимает всю высоту экрана */
+    overflow: hidden;
+}
+
+.hero-image {
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Масштабирует изображение, чтобы оно покрывало контейнер */
+    object-position: center; /* Центрирует изображение */
+}
+
+.about-section, .work-section, .contact-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* -------------------------- */
+.about-section {
+    background-color: #B6ACE4;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.top-section {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.me-image {
+    max-width: 30%;
+    border-radius: 55px;
+    margin-right: 20px;
+    flex-shrink: 0;
+    margin-left: 20px;
+    transition: transform 0.5s;
+}
+.me-image:hover{
+    transform: rotate(360deg);
+}
+
+.about-me {
+    flex: 1;
+}
+
+h1, p{
+    color: rgb(45, 51, 62);
+}
+
+.custom-list {
+    /*list-style-type: none;  */
+    font-family: 'n1', sans-serif;
+    text-align: left;
+    font-size: 20px;
+}
+.date{
+    font-size: 10px;
+}
+
+.about-title {
+    font-size: 36px;
+    text-align: left;
+    font-family: 'LuckiestGuy', sans-serif;
+}
+
+.about-text {
+    font-size: 26px;
+    line-height: 1.2;
+    margin-top: 0px;
+    text-align: justify;
+    font-family: 'n1', sans-serif;
+}
+
+.about-columns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.column:last-child {
+    margin-right: 0;
+}
+p {
+    font-family: 'n1', sans-serif;
+}
+
+/* -------------------------- */
+
+.work-section {
+    background-color: #ffc1c6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.work-section h1 {
+    position: relative; /* Абсолютное позиционирование для заголовка */
+    font-size: 60px;
+    margin-bottom: 0px;
+    font-family: 'LuckiestGuy', sans-serif;
+    color:antiquewhite;
+}
+
+.work-images {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 70px;
+    padding: 10px;
+    width: 100%;
+}
+
+.work-images a img {
+    border-radius: 15px;
+    width: 500px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.work-images a img:hover{
+    transform: scale(1.05);
+}
+
+.contact-section {
+    background-color: #fdb791;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-bottom: 0px; /* Добавляем отступ снизу для анимации */
+    height: 95vh;
+}
+
+.animation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.animation img {
+    max-width: 60%;
+    max-height: 60%;
+    object-fit: contain;
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-size: 35px;
+}
+
+.social-buttons a {
+    text-decoration: none;
+    color:antiquewhite;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: none;
+    transition: transform 0.3s; /* Добавляем плавный переход для трансформации */
+}
+
+.social-buttons a:hover {
+    transform: scale(1.2); /* Увеличиваем кнопку на 20% */
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    nav ul li {
+        margin: 5px 0; /* Уменьшаем отступы между элементами */
+    }
+
+    nav ul li a {
+        font-size: 14px; /* Уменьшаем размер шрифта */
+        padding: 8px 12px; /* Уменьшаем отступы внутри кнопок */
+    }
+
+    .work-images a img {
+        max-width: 400px;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .animation img {
+        max-width: 100%;
+    }
+
+    .social-buttons {
+        position: static;
+        transform: none;
+        margin-top: 20px;
+    }
+    .top-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .me-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+        max-width: 60%;
+    }
+
+    .about-columns {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .column {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .column:last-child {
+        margin-bottom: 0;
+    }
+}
