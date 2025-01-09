@@ -46,7 +46,7 @@ video {
     transform: scale(1.2);
 }
 /* -------------------------- */
-body.characterAnimation {
+body.characterAnimation, body.VFX {
     margin: 50px;
     padding: 0;
     background-color: rgb(241, 228, 211);
