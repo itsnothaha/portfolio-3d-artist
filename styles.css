@@ -192,6 +192,7 @@ p {
     transform: scale(1.05);
 }
 
+
 .contact-section {
     background-color: #fdb791;
     display: flex;
@@ -232,6 +233,7 @@ p {
 
 .social-buttons a {
     text-decoration: none;
+    font-family: 'LuckiestGuy', sans-serif;
     color:antiquewhite;
     padding: 10px 20px;
     border-radius: 5px;

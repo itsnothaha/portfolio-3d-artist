@@ -4,7 +4,7 @@ body.showreel {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100vh; /* Используем vh для высоты экрана */
+    height: 100vh; 
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -51,58 +51,136 @@ body.characterAnimation {
     padding: 0;
     background-color: rgb(241, 228, 211);
 }
+
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 20px;
 }
+
 .section-reels {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 20px;
     width: 100%;
 }
+
 .reels-container, .text-container {
     flex: 1;
     margin: 10px;
 }
+
 .reels-container video {
     max-height: calc(100vh - 180px);
     border-radius: 20px;
     width: auto;
     height: auto;
 }
+
 .text-container img {
     max-width: 100%;
     height: auto;
 }
 
-.video-title{
-    font-size: 36px;
+.video-title {
+    font-size: 2em;
     text-align: left;
     font-family: 'LuckiestGuy', sans-serif;
     color: rgb(243, 145, 64);
 }
 
-p.video-text{
-font-size: 1em;
+p.video-text {
+    font-size: 1em;
 }
 
+.reels-container, .text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-aligned .reels-container {
+    order: 1;
+    align-items: flex-start;
+    
+}
+
+.left-aligned .text-container {
+    order: 2;
+    align-items: flex-end;
+   
+}
+
+.right-aligned .reels-container {
+    order: 2;
+    align-items: flex-end;
+}
+
+.right-aligned .text-container {
+    order: 1;
+    align-items: flex-start;
+}
+
+
 @media (max-width: 768px) {
-    .section {
+    .section-reels {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
+
     .reels-container, .text-container {
         margin: 10px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%; /* Убедитесь, что контейнеры занимают всю ширину */
     }
+
     .video-title {
         font-size: 24px;
+        text-align: center;
     }
-    p.video-text{
+
+    p.video-text {
         font-size: 0.8em;
+        text-align: center;
+    }
+
+    .reels-container {
+        order: 1; /* Видео будет первым */
+        display: flex;
+        justify-content: center;
+        width: 100%; /* Убедитесь, что видео занимает всю ширину контейнера */
+    }
+
+    .text-container {
+        order: 2; /* Текст и изображение будут вторыми */
+        width: 100%; /* Убедитесь, что текст и изображение занимают всю ширину контейнера */
+    }
+
+    .reels-container video {
+        max-width: 100%;
+        max-height: calc(100vh - 180px);
+        width: auto;
+        height: auto;
+    }
+
+    .left-aligned .reels-container,
+    .right-aligned .reels-container {
+        order: 2; /* Видео будет первым */
+    }
+
+    .left-aligned .text-container,
+    .right-aligned .text-container {
+        order: 1; /* Текст и изображение будут вторыми */
     }
 }
+
+
+
+
 /* -------------------------- */
