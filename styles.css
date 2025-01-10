@@ -8,7 +8,7 @@
 }
 @font-face {
     font-family: 'n1';
-    src: url('fonts/KarstenThin.otf') format('opentype');
+    src: url('fonts/citricacyrillic.ttf') format('opentype');
 }
 
 body {
@@ -169,7 +169,7 @@ p {
     font-size: 60px;
     margin-bottom: 0px;
     font-family: 'LuckiestGuy', sans-serif;
-    color:antiquewhite;
+    color:rgb(250, 235, 215);
 }
 
 .work-images {
@@ -191,7 +191,40 @@ p {
 .work-images a img:hover{
     transform: scale(1.05);
 }
+/* для полосы прокрутки */
 
+/* Стилизация полосы прокрутки для WebKit-браузеров (Chrome, Safari, новые версии Opera) */
+.work-images::-webkit-scrollbar {
+    width: 12px; /* Ширина полосы прокрутки */
+    height: 12px; /* Высота полосы прокрутки */
+}
+
+.work-images::-webkit-scrollbar-track {
+    background: #faebd7; /* Цвет фона полосы прокрутки */
+    border-radius: 10px; /* Скругление углов фона */
+}
+
+.work-images::-webkit-scrollbar-thumb {
+    background: #ffb579; /* Цвет бегунка */
+    border-radius: 10px; /* Скругление углов бегунка */
+}
+
+.work-images::-webkit-scrollbar-thumb:hover {
+    background: #faa159; /* Цвет бегунка при наведении */
+}
+
+/* Стилизация полосы прокрутки для Firefox */
+.work-images {
+    scrollbar-width: thin; /* Ширина полосы прокрутки */
+    scrollbar-color: #ffb579 #faebd7; /* Цвет бегунка и фона */
+}
+
+/* Стилизация полосы прокрутки для IE и Edge */
+.work-images {
+    -ms-overflow-style: none; /* Скрыть полосу прокрутки */
+}
+
+/* -------------------------- */
 
 .contact-section {
     background-color: #fdb791;

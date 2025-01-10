@@ -56,4 +56,6 @@ Promise.all(images.map(img => new Promise(resolve => img.onload = resolve)))
             .then(() => setInterval(updateFrame, 50)); // Интервал между кадрами (в миллисекундах)
     });
     
-
+    
+    
+    
