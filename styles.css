@@ -8,7 +8,7 @@
 }
 @font-face {
     font-family: 'n1';
-    src: url('fonts/citricacyrillic.ttf') format('opentype');
+    src: url('fonts/classyvogue.otf') format('opentype');
 }
 
 body {
@@ -96,10 +96,6 @@ nav ul li a:hover {
     margin-right: 20px;
     flex-shrink: 0;
     margin-left: 20px;
-    transition: transform 0.5s;
-}
-.me-image:hover{
-    transform: rotate(360deg);
 }
 
 .about-me {

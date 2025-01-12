@@ -56,6 +56,13 @@ Promise.all(images.map(img => new Promise(resolve => img.onload = resolve)))
             .then(() => setInterval(updateFrame, 50)); // Интервал между кадрами (в миллисекундах)
     });
     
-    
+   
+     // Показать загрузку до полной загрузки страницы
+     window.addEventListener('load', () => {
+        const loader = document.getElementById('loader');
+        const loaderBackground = document.getElementById('loader-background');
+        loader.style.display = 'none';
+        loaderBackground.style.display = 'none';
+    });
     
     
